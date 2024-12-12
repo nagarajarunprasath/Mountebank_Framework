@@ -1,0 +1,22 @@
+{
+    "name": "PET Store APIs",
+    "port": 2020,
+    "protocol": "http",
+    "stubs": [
+    {
+        "responses": [
+        {
+            "inject": "<%- stringify(filename, 'Scripts/petstore/pets.ejs') %>"
+        }
+        ],
+        "predicates": [
+        {
+            "deepEquals": {
+                "method": "GET",
+                "path": "/v2/pet"
+            }
+        }
+        ]
+    }
+    ]
+}
